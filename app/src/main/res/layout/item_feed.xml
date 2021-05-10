@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="26dp" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/user_photo"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="Anthony Cortez"
+        android:textColor="@color/black_name"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/time_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/user_photo"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="30 min ago"
+        android:textColor="@color/gray_location"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/icon_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/time_post"
+        android:src="@drawable/location" />
+
+    <TextView
+        android:id="@+id/string_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/icon_location"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="London, United Kingdom"
+        android:textColor="@color/black_name"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="24dp"
+        android:background="@color/transparent"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/more" />
+
+    <TextView
+        android:id="@+id/string_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/string_location"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="48dp"
+        android:text="@string/texto"
+        android:textColor="@color/black_name"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/photo_feed"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_below="@id/string_post"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:id="@+id/like"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/like_clicked" />
+
+    <TextView
+        android:id="@+id/like_number"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/like"
+        android:text="534"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/comment"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/transparent"
+        android:layout_toRightOf="@id/like_number"
+        android:src="@drawable/comment" />
+
+    <TextView
+        android:id="@+id/comment_number"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/comment"
+        android:text="25"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:layout_marginLeft="16dp"
+        android:background="@color/transparent"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/comment_number" />
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/photo_feed"
+        android:background="@color/transparent"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/favorite"/>
+
+
+</RelativeLayout>
