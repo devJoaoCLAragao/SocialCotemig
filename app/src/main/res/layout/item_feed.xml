@@ -17,7 +17,6 @@
         android:layout_marginTop="16dp"
         android:layout_toRightOf="@+id/user_photo"
         android:fontFamily="@font/sourcesanspro_bold"
-        android:text="Anthony Cortez"
         android:textColor="@color/black_name"
         android:textSize="14sp" />
 
@@ -29,7 +28,6 @@
         android:layout_marginTop="3dp"
         android:layout_toRightOf="@+id/user_photo"
         android:fontFamily="@font/sourcesanspro_bold"
-        android:text="30 min ago"
         android:textColor="@color/gray_location"
         android:textSize="14sp" />
 
@@ -52,7 +50,6 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/icon_location"
         android:fontFamily="@font/sourcesanspro_bold"
-        android:text="London, United Kingdom"
         android:textColor="@color/black_name"
         android:textSize="12sp" />
 
@@ -73,12 +70,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="48dp"
-        android:text="@string/texto"
         android:textColor="@color/black_name"
         android:textSize="14sp" />
 
-    <ImageView
-        android:id="@+id/photo_feed"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery"
         android:layout_width="match_parent"
         android:layout_height="246dp"
         android:layout_below="@id/string_post"
@@ -88,7 +84,7 @@
         android:id="@+id/like"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="17dp"
         android:layout_marginBottom="16dp"
@@ -98,18 +94,17 @@
         android:id="@+id/like_number"
         android:layout_width="30dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="17dp"
         android:layout_toRightOf="@id/like"
-        android:text="534"
         android:textSize="14sp" />
 
     <ImageButton
         android:id="@+id/comment"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="17dp"
         android:background="@color/transparent"
@@ -120,17 +115,16 @@
         android:id="@+id/comment_number"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="17dp"
         android:layout_toRightOf="@id/comment"
-        android:text="25"
         android:textSize="14sp" />
 
     <ImageButton
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:layout_marginLeft="16dp"
         android:background="@color/transparent"
         android:layout_marginTop="17dp"
@@ -139,7 +133,7 @@
     <ImageButton
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/photo_feed"
+        android:layout_below="@id/gallery"
         android:background="@color/transparent"
         android:layout_alignParentRight="true"
         android:layout_marginTop="17dp"
