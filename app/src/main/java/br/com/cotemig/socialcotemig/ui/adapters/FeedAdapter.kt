@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cotemig.socialcotemig.R
 import br.com.cotemig.socialcotemig.model.Post
+import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import kotlinx.android.synthetic.main.item_feed.view.*
 
 class FeedAdapter (var context : Context, var list : List<Post>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -33,7 +36,11 @@ class FeedAdapter (var context : Context, var list : List<Post>) : RecyclerView.
         fun bind(context: Context, post: Post) {
 
             var user_photo = itemView.findViewById<ImageView>(R.id.user_photo)
-            Glide.with(context).load(itemView.user_photo).into(user_photo)
+            user_photo.load(post.avatar) {
+                transformations(RoundedCornersTransformation(50f))
+            }
+
+            //Glide.with(context).load(itemView.user_photo).into(user_photo)
 
             var user_name = itemView.findViewById<TextView>(R.id.user_name)
             user_name.text = post.user
@@ -53,10 +60,11 @@ class FeedAdapter (var context : Context, var list : List<Post>) : RecyclerView.
 
             gallery.onFlingListener = null
 
-            post.likes.size
+            var like_number = itemView.findViewById<TextView>(R.id.like_number)
+            like_number.text = post.likes.size.toString()
 
-
-
+            var string_post = itemView.findViewById<TextView>(R.id.string_post)
+            string_post.text = post.description
 
         }
     }

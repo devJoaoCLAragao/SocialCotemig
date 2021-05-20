@@ -7,6 +7,7 @@
     tools:context=".ui.activities.MainActivity">
 
     <TextView
+        android:id="@+id/feed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -14,6 +15,7 @@
         android:fontFamily="@font/sourcesanspro_bold"
         android:text="@string/feed"
         android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
         android:textSize="34sp" />
 
     <ImageView
@@ -27,8 +29,15 @@
         android:src="@drawable/find_me" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stories"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/feed"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="26dp"
         android:id="@+id/recyclerViewFeed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/direct"/>
+        android:layout_below="@+id/stories"/>
 </RelativeLayout>

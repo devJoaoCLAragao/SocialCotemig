@@ -8,9 +8,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cotemig.socialcotemig.R
 import br.com.cotemig.socialcotemig.model.Image
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_feed.view.*
-import kotlinx.android.synthetic.main.item_gallery.view.*
+import coil.load
 
 class GalleryAdapter (var context: Context, var list: List<Image>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -30,7 +28,9 @@ class GalleryAdapter (var context: Context, var list: List<Image>) : RecyclerVie
         fun bind(context: Context, postImage : Image){
 
             var image = view.findViewById<ImageView>(R.id.postImage)
-            Glide.with(context).load(itemView.postImage).into(image)
+            image.load(postImage.image)
+            //Glide.with(context).load(itemView.postImage).into(image)
+
         }
     }
 }
