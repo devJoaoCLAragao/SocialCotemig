@@ -6,38 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity">
 
-    <TextView
-        android:id="@+id/feed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="57dp"
-        android:fontFamily="@font/sourcesanspro_bold"
-        android:text="@string/feed"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        android:textSize="34sp" />
-
-    <ImageView
-        android:id="@+id/direct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/transparent"
-        android:src="@drawable/find_me" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/stories"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/feed"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="26dp"
-        android:id="@+id/recyclerViewFeed"
+    <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/stories"/>
+        android:layout_marginBottom="60dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buttonselected"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/transparent"
+                android:src="@drawable/comment" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:src="@drawable/notification" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:src="@drawable/user" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 </RelativeLayout>

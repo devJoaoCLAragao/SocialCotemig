@@ -12,4 +12,6 @@
     <color name="gray_location">#768196</color>
     <color name="flame_red">#fe2440</color>
     <color name="flame_yellow">#ff9509</color>
+    <color name="selectedcolor">#0d0e15</color>
+
 </resources>

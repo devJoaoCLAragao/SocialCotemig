@@ -2,4 +2,6 @@
     <string name="app_name">SocialCotemig</string>
     <string name="feed">Feed</string>
     <string name="texto">Spent all day in this cozy place with my laptop. Undoubtedly the best place for work.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
